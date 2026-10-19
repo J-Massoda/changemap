@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172522">
+  <meta name="description" content="ChangeMap is an interactive fictional demo for carrying a business decision through affected pages, forms, messages and teams.">
+  <title>ChangeMap — Every change has a footprint</title>
+  <link rel="stylesheet" href="./src/styles.css">
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#main" aria-label="ChangeMap home"><span class="brand-mark">↗</span><span>change<span class="brand-light">map</span></span></a>
+      <p class="eyebrow muted">OPERATIONS STUDIO / 01</p>
+      <div class="side-label">ACTIVE CHANGES <span id="change-count"></span></div>
+      <nav id="change-list" aria-label="Changes"></nav>
+      <button class="side-create" data-open="create">＋ New change</button>
+      <div class="side-bottom"><span class="live-dot"></span> Fictional workspace<br><small>No company data is sent to a server.</small></div>
+    </aside>
+    <main id="main" class="main">
+      <header class="topbar"><span>CHANGE INTELLIGENCE <span class="slash">/</span> DECISION TO DELIVERY</span><div class="top-actions"><button class="text-button" id="reset-button">Reset demo</button><button class="text-button" id="export-button">Export report ↗</button></div></header>
+      <div id="app" aria-live="polite"></div>
+    </main>
+  </div>
+  <dialog id="modal"><form id="modal-form" method="dialog"><div id="modal-content"></div></form></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
